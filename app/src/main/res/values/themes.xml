@@ -3,23 +3,32 @@
     <style name="Base.Theme.EcommerceTrainning" parent="Theme.Material3.Light.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <!-- System UI Configurations-->
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true
+        </item> <!-- For making status bar content color dark -->
+        <item name="android:navigationBarColor">@android:color/white</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true
+        </item>  <!-- For making Navigation bar content color dark -->
+
     </style>
 
     <style name="Theme.EcommerceTrainning" parent="Base.Theme.EcommerceTrainning" />
 
     
-    <style name="MainActivityTheme" parent="Base.Theme.EcommerceTrainning">
+    <style name="Theme.MainActivity" parent="Base.Theme.EcommerceTrainning">
         <!-- System UI Configurations-->
         <item name="android:statusBarColor">@color/primary_color</item>
         <item name="android:windowLightStatusBar">false
         </item> <!-- For making status bar content color dark -->
-        <item name="windowNoTitle">true</item>
-        <item name="android:windowBackground">@drawable/launch_background</item>
         <item name="android:navigationBarColor">@color/primary_color</item>
         <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">false
         </item>  <!-- For making Navigation bar content color dark -->
-    </style>
 
+        <item name="android:windowBackground">@drawable/launch_background</item>
+
+    </style>
 
 
 
