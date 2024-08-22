@@ -1,8 +1,10 @@
+
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id("com.google.gms.google-services")
     id("com.google.firebase.crashlytics")
+    id("kotlin-kapt")
 }
 
 android {
@@ -35,6 +37,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures{
+        viewBinding=true
+        dataBinding=true
+    }
 }
 
 dependencies {
@@ -52,6 +58,14 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+    //navigation component
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
+
+
+
     implementation("androidx.core:core-splashscreen:1.0.1")
 
+    //checking network and internet connectivity
+    implementation("com.github.pwittchen:reactivenetwork-rx2:3.0.8")
 }
